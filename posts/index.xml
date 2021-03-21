@@ -1,0 +1,60 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Ezzzz</title>
+        <link>/posts/</link>
+        <description>Recent content in Posts on Ezzzz</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Wed, 01 Jan 2020 11:50:08 -0600</lastBuildDate>
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Optointerruptor</title>
+            <link>/posts/2020/01/optointerruptor/</link>
+            <pubDate>Wed, 01 Jan 2020 11:50:08 -0600</pubDate>
+            
+            <guid>/posts/2020/01/optointerruptor/</guid>
+            <description>Ya vimos como leer sensores digitales, ahora haremos una práctica bastante simple que será la base para hacer muchos proyectos, el cual es saber manejar y leer los datos que nos manda un optointerruptor, estos se usan en las cajas del supermercado en la banda transportadora que al bloquear la señal se detiene pero si es una señal limpia avanza la banda o también para tener un conteo se personas u objetos, abajo se muestra el código, material y explicación de la práctica.</description>
+            <content type="html"><![CDATA[<p>Ya vimos como leer sensores digitales, ahora haremos una práctica bastante simple que será la base para hacer muchos proyectos, el cual es saber manejar y leer los datos que nos manda un optointerruptor, <strong>estos se usan en las cajas del supermercado en la banda transportadora que al bloquear la señal se detiene pero si es una señal limpia avanza la banda o también para tener un conteo se personas u objetos</strong>, abajo se muestra el código, material y explicación de la práctica.</p>
+<h2 id="material">Material</h2>
+<blockquote>
+<ul>
+<li>Arduino</li>
+<li>LED 5mm</li>
+<li>Resistencias de 220 Ohm&rsquo;s</li>
+<li>Diodo emisor de 5mm IR</li>
+<li>Resistencia de 10 kOhm&rsquo;s</li>
+<li>Fototransistor</li>
+<li>Protoboard</li>
+<li>Jumpers</li>
+</ul>
+</blockquote>
+<h2 id="circuito">Circuito</h2>
+<p><img src="https://www.abc.com.py/resizer/nKvQnZP_HuQ0MBkXukxSVfSXhTE=/fit-in/770x495/smart/arc-anglerfish-arc2-prod-abccolor.s3.amazonaws.com/public/BGNZLHYCWVDOXLJSDEGHWC52OM.jpg" alt="circuito"></p>
+<h2 id="código">Código</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#define LED 2
+</span><span style="color:#75715e">#define Opto 3
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> Opto_lee;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  pinMode(LED, OUTPUT);
+  pinMode(Opto, INPUT);
+}
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  Opto_lee <span style="color:#f92672">=</span> digitalRead(Opto);
+   <span style="color:#66d9ef">if</span> (Opto_lee <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
+     digitalWrite(LED, HIGH);
+   } 
+   <span style="color:#66d9ef">else</span> {
+    digitalWrite(LED, LOW);
+   }
+}
+</code></pre></div><h2 id="explicación">Explicación</h2>
+<p>Muy bien, el funcionamiento es muy simple, definimos dos pines, el <strong>led</strong> y el <strong>optointerruptor</strong> al led lo ponemos como <code>OUTPUT</code> y para el optointerruptor lo ponemos como <code>INPUT</code>, también creamos una variable del tipo entero que almacenará el valor enviado por el fototransistor al <strong>pin 3</strong>, después en el <code>loop()</code> hacemos nuestro programa de ejecución, usando <code>digitalRead()</code> leemos el valor del pin 3 y lo almacenamos en la variable <code>Opto_lee</code>, después con un <code>if()</code> hacemos una comparación lógica, si el valor digital es <strong>1 enciende el led</strong> usando <code>digitalWrite()</code>, en caso de que sea un valor <strong>distinto a 1</strong> permanecerá apagado. Como vimos este es el funcionamiento de un optointerruptor que nos servirá para hacer muchos proyectos, desde una banda transportadora hasta un seguidor de líneas.</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

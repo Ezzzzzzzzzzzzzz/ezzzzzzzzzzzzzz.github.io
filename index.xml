@@ -6,16 +6,6 @@
     <description>Recent content on Ezzzz</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 01 Jan 2020 11:50:08 -0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Optointerruptor</title>
-      <link>/posts/2020/01/optointerruptor/</link>
-      <pubDate>Wed, 01 Jan 2020 11:50:08 -0600</pubDate>
-      
-      <guid>/posts/2020/01/optointerruptor/</guid>
-      <description>Ya vimos como leer sensores digitales, ahora haremos una práctica bastante simple que será la base para hacer muchos proyectos, el cual es saber manejar y leer los datos que nos manda un optointerruptor, estos se usan en las cajas del supermercado en la banda transportadora que al bloquear la señal se detiene pero si es una señal limpia avanza la banda o también para tener un conteo se personas u objetos, abajo se muestra el código, material y explicación de la práctica.</description>
-    </item>
-    
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
